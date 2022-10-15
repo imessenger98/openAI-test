@@ -8,17 +8,18 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
 
-app.get('/areyouthere',async (req,res)=>{
+app.get('/test',async (req,res)=>{
     try {
         const completion = await openAi.createCompletion({
           model: "text-davinci-001",
-          prompt: "are you there ?",
+          prompt: "write a resignation letter to PMO with greater than 700 words",
+          temperature: 0.9,
+          max_tokens:6,
+          n: 1,
+          stream: false,
         },
-        {
-            timeout: 20000,
-          }
         );
-        res.send(completion.data.choices[0].text)
+        res.status(200).json({ result: completion.data.choices[0].text });
       } catch (error) {
         if (error.response) {
           console.log(error.response.status);
@@ -32,5 +33,5 @@ app.get('/areyouthere',async (req,res)=>{
 
 
 app.listen(process.env.PORT, () => {
-    console.log(`app listening on port ${process.env.PORT}`)
+    console.log(` started listening : http://localhost:/${process.env.PORT} `)
   })
