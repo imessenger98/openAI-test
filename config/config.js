@@ -5,4 +5,5 @@ dotenv.config()
 const configuration = new Configuration({
     apiKey:process.env.secret_key,
 });
-export const openAi = new OpenAIApi(configuration);
+const openAi = new OpenAIApi(configuration);
+export default openAi;

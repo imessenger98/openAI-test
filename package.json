@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "author": "muhammed yazeen an ,anas,shefas",
+  "author": "muhammed yazeen an",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.1.2",
