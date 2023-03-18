@@ -1,4 +1,8 @@
-# OpenAI API Usage Instructions
+# open AI (Node)
+
+###### TO get your own secret Key : https://platform.openai.com/account/api-keys
+
+### OpenAI API Usage Instructions
 
 #### To use the OpenAI API in your application, you can send a POST request to the following endpoint: /
 
@@ -10,7 +14,7 @@
 
 ###### The response from the API will be a JSON object with the answer to your question.
 
-## Curl Request
+### Curl Request
 
 ```bash
 curl --location --request POST 'http://localhost:3000/open-api' \
