@@ -1,4 +1,4 @@
-#OpenAI API Usage Instructions
+# OpenAI API Usage Instructions
 
 #### To use the OpenAI API in your application, you can send a POST request to the following endpoint: /
 
